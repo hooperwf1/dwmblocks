@@ -1,5 +1,5 @@
 /* macro for conveniently specifying pathu and pathc below */
-#define PATH(name)                      "<path to the folder containing block scripts>/"name
+#define PATH(name)                      "/homeDrive/scripts/scriptsBASH/status-bar/"name
 
 /* buffer size for capturing output of the programs used for updating blocks */
 #define CMDOUTLENGTH                    50
@@ -17,7 +17,7 @@
 
 /* delimiter specified as an array of characters
  * don't remove DELIMITERENDCHAR at the end */
-static const char delimiter[] = { ' ', ' ', ' ', DELIMITERENDCHAR };
+static const char delimiter[] = {' '};
 
 #include "block.h"
 
@@ -41,11 +41,13 @@ static const char delimiter[] = { ' ', ' ', ' ', DELIMITERENDCHAR };
 #define INTERVALs                       1
 #define INTERVALn                       0
 
+// Set pathc to a PATH() if needs to be clickable
 static Block blocks[] = {
 /*      pathu                           pathc                           interval        signal */
-        { PATH("calendar.sh"),          NULL,                           30,             1},
-        { PATH("volume.sh"),            PATH("volume_button.sh"),       0,              2},
-        { PATH("cpu_temp.sh"),          PATH("cpu_temp_button.sh"),     1,              4},
-        { PATH("battery.sh"),           PATH("battery_button.sh"),      30,             3},
+        { PATH("keyboard-layout.sh"),   NULL,                           0,              5},
+        { PATH("cpu-temp.sh"),          NULL,                           10,             4},
+        { PATH("battery.sh"),           NULL,			        5,              3},
+        { PATH("date.sh"),              NULL,                           60,             2},
+        { PATH("clock.sh"),             NULL,                           60,             1},
         { NULL } /* just to mark the end of the array */
 };
