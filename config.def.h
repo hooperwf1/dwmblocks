@@ -44,6 +44,7 @@ static const char delimiter[] = {' '};
 // Set pathc to a PATH() if needs to be clickable
 static Block blocks[] = {
 /*      pathu                           pathc                           interval        signal */
+        { PATH("volume-bar.sh"),        NULL,                           0,              6},
         { PATH("keyboard-layout.sh"),   NULL,                           0,              5},
         { PATH("cpu-temp.sh"),          NULL,                           10,             4},
         { PATH("battery.sh"),           NULL,			        5,              3},
